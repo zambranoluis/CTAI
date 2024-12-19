@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Solid-Mono";
+  src: url("../fonts/Solid-Mono.ttf") format("truetype");
+}
+
+body {
+  background-color: #121212;
+  /* Dark background */
+  color: #d2dee1;
+  /* Light text */
+}
+
+.container {
+  background-color: #1c1c1c;
+  /* Slightly lighter dark background */
+  color: #d2dee1;
+  /* Light text */
+  border: 1px solid #989f9f;
+  /* Subtle border */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+input {
+  background-color: #1c1c1c;
+  /* Match container background */
+  color: #989f9f;
+  /* Slightly lighter text */
+  border: 1px solid #989f9f;
+  /* Subtle border */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+input::placeholder {
+  color: #575650;
+  /* Placeholder text */
+}
+
+.btn-primary {
+  background-color: #62aba4;
+  /* Primary button color */
+  color: #d2dee1;
+  /* Button text color */
+  border: 1px solid #989f9f;
+  /* Subtle border */
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #52918b;
+  /* Darker on hover */
+}
+
+a {
+  color: #62aba4;
+  /* Link color */
+}
+
+a:hover {
+  color: #52918b;
+  /* Darker on hover */
+}

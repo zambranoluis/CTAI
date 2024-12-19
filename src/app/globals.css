@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html[data-theme="dark"] {
+  --color-background: #121212;
+  --color-foreground: #;
+  --color-background-shade: #272727;
+  --color-background-shade-hover: #757575;
+  --color-background-component: ;
+  --color-background-report: #0c0c0c;
+  --color-text: #d2dee1;
+  --color-text-shade: #585858;
+  --color-primary: #62aba4;
+  --color-secondary: #ca0000;
+}
+
+html[data-theme="light"] {
+  --color-background: #ffffff;
+  --color-background-shade: #ecebeb;
+  --color-background-shade-hover: #5d5d5d;
+  --color-background-component: ;
+  --color-background-report: #f3f3f3;
+  --color-text: #333333;
+  --color-text-shade: #bfc0c0;
+  --color-primary: #007bff;
+  --color-secondary: #ca0000;
+}
+
+*::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: var(--color-background);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--color-text);
+}
+
+.noScrollBar::-webkit-scrollbar {
+  display: none;
+}
+
+.noScrollBar::-webkit-scrollbar-track {
+}
+
+.noScrollBar::-webkit-scrollbar-thumb {
+}
+
+@media (max-width: 768px) {
+}
+
+/* Solid Mono Font */
+@font-face {
+  font-family: "Solid-Mono";
+  src: url("fonts/Solid-Mono.ttf") format("truetype");
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    filter: drop-shadow(2.5px 1.25px 4px var(--color-primary));
+  }
+  25% {
+    filter: drop-shadow(2.7px 1.35px 4.5px var(--color-primary));
+  }
+  50% {
+    filter: drop-shadow(3px 1.5px 5px var(--color-primary));
+  }
+  75% {
+    filter: drop-shadow(2.7px 1.35px 4.5px var(--color-primary));
+  }
+}
+
+.drop-shadow-animate {
+  animation: flicker 1s infinite ease-in-out;
+}
+
+
+
+.gradientTabProfile {
+    /* background: rgb(189, 189, 189); */
+    background: linear-gradient(90deg, rgb(247, 247, 247) 0%, rgba(255,143,38,1) 20%, rgba(150,126,197,1) 48%, rgba(0,255,222,1) 100%);
+    animation: gradientTabProfile 15s ease infinite;
+}
+
+@keyframes gradientTabProfile {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+/* .masked-text {
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-image: url('https://via.placeholder.com/600');
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
